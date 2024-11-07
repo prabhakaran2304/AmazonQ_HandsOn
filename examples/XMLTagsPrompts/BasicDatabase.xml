@@ -1,0 +1,22 @@
+<ProgrammingExampleRequest>
+    <Language>Python</Language>
+    <UseCase>Database Retrieval</UseCase>
+    <Database>SQLite</Database>
+    <Query>
+        <Table>Customers</Table>
+        <Fields>
+            <Field>CustomerID</Field>
+            <Field>FirstName</Field>
+            <Field>LastName</Field>
+            <Field>Email</Field>
+            <Field>PhoneNumber</Field>
+            <Field>Country</Field>
+        </Fields>
+        <Condition>
+            <Field>Country</Field>
+            <Operator>Equals</Operator>
+            <Value>USA</Value>
+        </Condition>
+        <Limit>50</Limit>
+    </Query>
+</ProgrammingExampleRequest>

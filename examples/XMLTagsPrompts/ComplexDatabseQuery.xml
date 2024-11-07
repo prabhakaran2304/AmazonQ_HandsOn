@@ -1,0 +1,32 @@
+<ProgrammingExampleRequest>
+    <Language>SQL</Language>
+    <UseCase>Complex Database Query</UseCase>
+    <Database>PostgreSQL</Database>
+    <Query>
+        <Table>Orders</Table>
+        <Fields>
+            <Field>CustomerID</Field>
+            <Field>SUM(OrderAmount)</Field>
+            <Field>COUNT(OrderID)</Field>
+            <Field>Country</Field>
+        </Fields>
+        <Condition>
+            <Field>OrderDate</Field>
+            <Operator>Between</Operator>
+            <Value>2023-01-01 AND 2023-12-31</Value>
+        </Condition>
+        <GroupBy>
+            <Field>CustomerID</Field>
+        </GroupBy>
+        <Having>
+            <Field>SUM(OrderAmount)</Field>
+            <Operator>GreaterThan</Operator>
+            <Value>5000</Value>
+        </Having>
+        <OrderBy>
+            <Field>SUM(OrderAmount)</Field>
+            <Direction>DESC</Direction>
+        </OrderBy>
+        <Limit>100</Limit>
+    </Query>
+</ProgrammingExampleRequest>

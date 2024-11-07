@@ -1,0 +1,11 @@
+@workspace can you generate the documentation for the functions in ConversationProcessingService.java, with the inline comment as an example below:
+/**
+Generate Conversation Range Key based on provided conversation time.
+<p>
+This method returns immediately and return the range key based on the internal prefix and delimiter
+param conversationTime the conversation start time
+return the range key
+*/
+public String generateConversationRangeKey(String conversationTime) {
+return conversationInitial + TartarusConstants.COMPOSITE_KEY_DELIMITER + conversationTime;
+}
